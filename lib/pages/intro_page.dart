@@ -33,6 +33,15 @@ class IntroPage extends StatelessWidget {
           ],
         ),
       ),
+      
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home'
+          ),
+        ],
+      ),
     );
   }
 }
