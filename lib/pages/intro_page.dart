@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:erenmine/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -20,22 +21,44 @@ class IntroPage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(25.0),
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Image.asset('lib/images/bts.jpg', height: 240),
             ),
 
-            const SizedBox(height: 40),
+            const SizedBox(height: 20),
 
             Text("Spikey", style: TextStyle(fontSize: 24)),
 
-            const SizedBox(height: 40),
+            const SizedBox(height: 20),
 
             Text(
               "Brand new dark theme image, made with custom theme image, just for you.",
               style: TextStyle(fontSize: 14, color: Colors.grey),
               textAlign: TextAlign.center,
+            ),
+
+            const SizedBox(height: 20),
+            
+            InkWell(
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage())),
+              child: Container(
+                width: 200,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+              
+                padding: EdgeInsets.all(8),
+                
+                child: Center(
+                  child: Text("Buy now", style: TextStyle(
+                    color: Colors.white
+                  )),
+                )
+              ),
             ),
           ],
         ),
